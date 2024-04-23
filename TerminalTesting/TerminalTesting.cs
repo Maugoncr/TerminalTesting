@@ -104,12 +104,57 @@ namespace TerminalTesting
             serialPort1.Write(binaryData, 0, binaryData.Length);
         }
 
+        private void sendSP20()
+        {
+            SetConfigSerialPortForHeater();
+            string hexCommand;
+            string[] hexBytes;
+            byte[] binaryData;
+
+            hexCommand = "01 06 21 03 00 14 73 F9";
+
+            hexBytes = hexCommand.Split(' ');
+
+            binaryData = new byte[hexBytes.Length];
+
+            for (int i = 0; i < hexBytes.Length; i++)
+            {
+                binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+            }
+            serialPort1.Write(binaryData, 0, binaryData.Length);
+        }
+
+        private void sendSP0()
+        {
+            SetConfigSerialPortForHeater();
+            string hexCommand;
+            string[] hexBytes;
+            byte[] binaryData;
+
+            hexCommand = "01 06 21 03 00 00 73 F6";
+
+            hexBytes = hexCommand.Split(' ');
+
+            binaryData = new byte[hexBytes.Length];
+
+            for (int i = 0; i < hexBytes.Length; i++)
+            {
+                binaryData[i] = Convert.ToByte(hexBytes[i], 16);
+            }
+            serialPort1.Write(binaryData, 0, binaryData.Length);
+        }
+
         private void btnSendCommandRequestTC_Click(object sender, EventArgs e)
         {
             sendRequestTCTemp();
         }
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+
+        }
+
+        private void btnSP20_Click(object sender, EventArgs e)
         {
 
         }

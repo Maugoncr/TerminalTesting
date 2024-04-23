@@ -34,6 +34,8 @@
             this.btnRefreshCOM = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnSendCommandRequestTC = new System.Windows.Forms.Button();
+            this.btnSP20 = new System.Windows.Forms.Button();
+            this.btnSP0 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comPort
@@ -82,12 +84,33 @@
             this.btnSendCommandRequestTC.UseVisualStyleBackColor = true;
             this.btnSendCommandRequestTC.Click += new System.EventHandler(this.btnSendCommandRequestTC_Click);
             // 
+            // btnSP20
+            // 
+            this.btnSP20.Location = new System.Drawing.Point(607, 186);
+            this.btnSP20.Name = "btnSP20";
+            this.btnSP20.Size = new System.Drawing.Size(249, 54);
+            this.btnSP20.TabIndex = 4;
+            this.btnSP20.Text = "Send SP 20";
+            this.btnSP20.UseVisualStyleBackColor = true;
+            this.btnSP20.Click += new System.EventHandler(this.btnSP20_Click);
+            // 
+            // btnSP0
+            // 
+            this.btnSP0.Location = new System.Drawing.Point(607, 258);
+            this.btnSP0.Name = "btnSP0";
+            this.btnSP0.Size = new System.Drawing.Size(249, 54);
+            this.btnSP0.TabIndex = 5;
+            this.btnSP0.Text = "Send SP 0";
+            this.btnSP0.UseVisualStyleBackColor = true;
+            // 
             // TerminalTesting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(965, 499);
+            this.Controls.Add(this.btnSP0);
+            this.Controls.Add(this.btnSP20);
             this.Controls.Add(this.btnSendCommandRequestTC);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.btnRefreshCOM);
@@ -106,6 +129,8 @@
         private System.Windows.Forms.Button btnRefreshCOM;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnSendCommandRequestTC;
+        private System.Windows.Forms.Button btnSP20;
+        private System.Windows.Forms.Button btnSP0;
     }
 }
 
