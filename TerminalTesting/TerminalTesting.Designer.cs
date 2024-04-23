@@ -102,6 +102,7 @@
             this.btnSP0.TabIndex = 5;
             this.btnSP0.Text = "Send SP 0";
             this.btnSP0.UseVisualStyleBackColor = true;
+            this.btnSP0.Click += new System.EventHandler(this.btnSP0_Click);
             // 
             // TerminalTesting
             // 

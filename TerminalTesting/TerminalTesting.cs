@@ -156,7 +156,12 @@ namespace TerminalTesting
 
         private void btnSP20_Click(object sender, EventArgs e)
         {
+            sendSP20();
+        }
 
+        private void btnSP0_Click(object sender, EventArgs e)
+        {
+            sendSP0();
         }
     }
 }
