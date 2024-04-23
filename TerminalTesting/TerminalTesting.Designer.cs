@@ -36,6 +36,7 @@
             this.btnSendCommandRequestTC = new System.Windows.Forms.Button();
             this.btnSP20 = new System.Windows.Forms.Button();
             this.btnSP0 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comPort
@@ -104,12 +105,23 @@
             this.btnSP0.UseVisualStyleBackColor = true;
             this.btnSP0.Click += new System.EventHandler(this.btnSP0_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(39, 246);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 39);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Try ModBus";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TerminalTesting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(965, 499);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSP0);
             this.Controls.Add(this.btnSP20);
             this.Controls.Add(this.btnSendCommandRequestTC);
@@ -132,6 +144,7 @@
         private System.Windows.Forms.Button btnSendCommandRequestTC;
         private System.Windows.Forms.Button btnSP20;
         private System.Windows.Forms.Button btnSP0;
+        private System.Windows.Forms.Button button1;
     }
 }
 
