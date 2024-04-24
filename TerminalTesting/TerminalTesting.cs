@@ -8,20 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EasyModbus;
-using HslCommunication.ModBus;
 
 namespace TerminalTesting
 {
     public partial class TerminalTesting : Form
     {
-        ModbusClient modbusClient;
         public TerminalTesting()
         {
             InitializeComponent();
-
-           
-
         }
 
         private void SetConfigSerialPortForHeater()
@@ -31,7 +25,6 @@ namespace TerminalTesting
             serialPort1.StopBits = StopBits.One;
             serialPort1.WriteTimeout = 100;
         }
-
        
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,7 +50,6 @@ namespace TerminalTesting
                     serialPort1.Close();
                     return false;
                 }
-                // Remember Baud Rate
                 serialPort1.PortName = COM;
                 serialPort1.Open();
                 return true;
@@ -170,16 +162,6 @@ namespace TerminalTesting
             sendSP0();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            modbusClient = new ModbusClient("COM3");//communication settings
-            modbusClient.UnitIdentifier = 1;
-            modbusClient.Baudrate = 9200;
-            modbusClient.Parity = System.IO.Ports.Parity.None;
-            modbusClient.StopBits = System.IO.Ports.StopBits.One;
-            modbusClient.Connect();
-
-            modbusClient.ReadHoldingRegisters(200, 1);
-        }
+       
     }
 }

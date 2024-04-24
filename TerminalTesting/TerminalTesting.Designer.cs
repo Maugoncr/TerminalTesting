@@ -36,7 +36,6 @@
             this.btnSendCommandRequestTC = new System.Windows.Forms.Button();
             this.btnSP20 = new System.Windows.Forms.Button();
             this.btnSP0 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comPort
@@ -91,7 +90,7 @@
             this.btnSP20.Name = "btnSP20";
             this.btnSP20.Size = new System.Drawing.Size(249, 54);
             this.btnSP20.TabIndex = 4;
-            this.btnSP20.Text = "Send SP 20";
+            this.btnSP20.Text = "Send SetPoint 20";
             this.btnSP20.UseVisualStyleBackColor = true;
             this.btnSP20.Click += new System.EventHandler(this.btnSP20_Click);
             // 
@@ -101,27 +100,16 @@
             this.btnSP0.Name = "btnSP0";
             this.btnSP0.Size = new System.Drawing.Size(249, 54);
             this.btnSP0.TabIndex = 5;
-            this.btnSP0.Text = "Send SP 0";
+            this.btnSP0.Text = "Send SetPoint 0";
             this.btnSP0.UseVisualStyleBackColor = true;
             this.btnSP0.Click += new System.EventHandler(this.btnSP0_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(39, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 39);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Try ModBus";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TerminalTesting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(965, 499);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(965, 340);
             this.Controls.Add(this.btnSP0);
             this.Controls.Add(this.btnSP20);
             this.Controls.Add(this.btnSendCommandRequestTC);
@@ -144,7 +132,6 @@
         private System.Windows.Forms.Button btnSendCommandRequestTC;
         private System.Windows.Forms.Button btnSP20;
         private System.Windows.Forms.Button btnSP0;
-        private System.Windows.Forms.Button button1;
     }
 }
 
