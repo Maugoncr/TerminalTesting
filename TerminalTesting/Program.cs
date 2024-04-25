@@ -14,12 +14,6 @@ namespace TerminalTesting
         [STAThread]
         static void Main()
         {
-
-            if (!HslCommunication.Authorization.SetAuthorizationCode("ABCDEFG"))
-            {
-                MessageBox.Show(" active failed");
-            }
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new TerminalTesting());

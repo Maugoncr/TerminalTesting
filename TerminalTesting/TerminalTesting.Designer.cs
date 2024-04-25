@@ -36,6 +36,9 @@
             this.btnSendCommandRequestTC = new System.Windows.Forms.Button();
             this.btnSP20 = new System.Windows.Forms.Button();
             this.btnSP0 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.temperatureLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // comPort
@@ -50,6 +53,7 @@
             // serialPort1
             // 
             this.serialPort1.Parity = System.IO.Ports.Parity.Even;
+            this.serialPort1.ReceivedBytesThreshold = 14;
             this.serialPort1.WriteTimeout = 100;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
@@ -104,12 +108,40 @@
             this.btnSP0.UseVisualStyleBackColor = true;
             this.btnSP0.Click += new System.EventHandler(this.btnSP0_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(39, 225);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 32);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // temperatureLabel
+            // 
+            this.temperatureLabel.AutoSize = true;
+            this.temperatureLabel.Location = new System.Drawing.Point(248, 225);
+            this.temperatureLabel.Name = "temperatureLabel";
+            this.temperatureLabel.Size = new System.Drawing.Size(0, 13);
+            this.temperatureLabel.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(324, 62);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 8;
+            // 
             // TerminalTesting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(965, 340);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.temperatureLabel);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSP0);
             this.Controls.Add(this.btnSP20);
             this.Controls.Add(this.btnSendCommandRequestTC);
@@ -120,6 +152,7 @@
             this.Text = "Terminal Testing";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,6 +165,9 @@
         private System.Windows.Forms.Button btnSendCommandRequestTC;
         private System.Windows.Forms.Button btnSP20;
         private System.Windows.Forms.Button btnSP0;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label temperatureLabel;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
